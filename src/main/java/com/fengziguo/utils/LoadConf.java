@@ -51,6 +51,7 @@ public class LoadConf {
          accessKeyId = props.getProperty("accessKeyId");
         accessKeySecret = props.getProperty("accessKeySecret");
         ddnsDomains = props.getProperty("ddnsDomains");
+        aliDomains =props.getProperty("aliDomains");
         System.out.println(ddnsDomains);
         if (StringUtils.isEmpty(accessKeySecret)) {
             String errmsg = "accessKeySecret is null";
