@@ -1,7 +1,7 @@
 package com.fengziguo;
 
-import com.fengziguo.utils.LoadConf;
-import com.fengziguo.utils.CheckDomains;
+
+import com.fengziguo.jdns.CheckDomains;
 import org.apache.log4j.Logger;
 
 import static com.fengziguo.utils.LoadConf.loadConf;
@@ -21,9 +21,13 @@ public class JdnsMain {
 
     private static final Logger LOG = Logger.getLogger(JdnsMain.class);
     public static void main(String[] args) {
-        //初始化配置信息
         try {
             loadConf(args[0]);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        try {
+            int i= Integer.parseInt(args[1]);
             while (true) {
                 try {
                     CheckDomains xx =  new CheckDomains();
@@ -32,19 +36,14 @@ public class JdnsMain {
                     e1.printStackTrace();
                 }
                 try {
-                   Thread.sleep(1000 * 5);
+                   Thread.sleep(i * 5);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
-
-
-        } catch (Exception e) {
+        }catch (Exception e) {
             e.printStackTrace();
             LOG.error(e);
         }
-
-        System.out.println(LoadConf.accessKeyId+"ggggggg");
-
     }
 }

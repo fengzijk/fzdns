@@ -33,7 +33,7 @@
         </dependency>
         <!--日志END-->
 
-            <!-- https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-httpdns -->
+        <!--阿里云SDK-->
         <dependency>
         <groupId>com.aliyun</groupId>
         <artifactId>aliyun-java-sdk-alidns</artifactId>

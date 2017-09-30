@@ -10,7 +10,7 @@ import java.net.UnknownHostException;
  * @作者 :fengzijk
  * @email :guozhifengvip@163.com
  * @时间 : 2017年09月29日15:27
- * @修改 :  who   when    what
+ * @描述 : 通过域名获取IP
  * --------------------------------------------------
  */
 public class DoMains2Ip {
@@ -20,7 +20,6 @@ public class DoMains2Ip {
             myServer = InetAddress.getByName(domainName);
         } catch (UnknownHostException e) {
         }
-
-        return (myServer.getHostAddress());
+         return (myServer.getHostAddress());
     }
 }
